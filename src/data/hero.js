@@ -13,7 +13,7 @@
 export const hero = {
   antetitulo: 'ISO 9001 · 14001 · 45001 · 27001 · 22301 · 20000-1',
   bajada:
-    'Entradas, controles, evidencia y trazabilidad: bajo la burocracia, una norma describe una arquitectura. La diseño, la integro y la automatizo para empresas que tienen que certificarse —o que ya lo están y quieren una norma más.',
+    'Casi todo lo que decide una certificación es documental: si la evidencia está estructurada y se encuentra, o si está repartida en carpetas que nadie sabe abrir. Levanto esa estructura —en SharePoint, Drive, Dropbox o donde ya trabajen— y la integro con el resto del sistema.',
 
   acciones: [
     { label: 'Ver servicios', href: '#servicios', icon: 'fa-solid fa-arrow-down' },
@@ -23,6 +23,7 @@ export const hero = {
   cinta: [
     { dato: '6', pie: 'normas ISO como auditor interno' },
     { dato: 'Anexo SL', pie: 'el núcleo común de las seis' },
+    { dato: '4', pie: 'plataformas documentales habituales' },
   ],
 
   siguiente: 'servicios',

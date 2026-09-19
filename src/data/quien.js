@@ -31,8 +31,15 @@ export const quien = {
     <p>Mi recorrido es poco común y por eso sirve: ingeniero civil reconvertido
     a tecnología, analista de sistemas, desarrollo en Java y JavaScript,
     automatización con RPA y tableros en Power BI. Esa mezcla es la que permite
-    el cuarto servicio de esta página — mucha gente entiende de normas y mucha
-    gente automatiza, pero casi nadie hace las dos cosas.</p>
+    los dos extremos de esta página — mucha gente entiende de normas y mucha
+    gente entiende de plataformas, pero casi nadie hace las dos cosas.</p>
+
+    <p>Donde más aporto es en la <strong>gestión documental</strong>. Hay
+    empresas que contratan a una consultora solo para ordenar sus documentos
+    de cara a la auditoría, y suele salir un repositorio que funciona el día
+    de la revisión y se degrada a los tres meses. Lo que dejo montado está
+    pensado para que siga en pie en la auditoría de vigilancia del año
+    siguiente, operado por su gente y no por mí.</p>
 
     <p>Vivo en Puerto Montt y trabajo con empresas de Chile y del resto de
     Latinoamérica. Escribo y trabajo en español; también manejo inglés a nivel

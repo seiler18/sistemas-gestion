@@ -19,11 +19,17 @@ export const servicios = {
   eyebrow: 'Qué construyo',
   titulo: 'Servicios',
   subtitulo:
-    'Alcance cerrado, entregables definidos y precio fijo. Como un proyecto de software: se especifica antes de empezar y no se factura por reunión.',
+    'Alcance cerrado, entregables definidos y precio fijo. El primero es donde más aporto: casi todo el trabajo de una certificación es documental, y casi nadie lo estructura bien.',
   filtro: false,
   densidad: 'amplia',
 
   items: [
+    {
+      titulo: 'Estructura documental del sistema',
+      texto:
+        'El servicio con el que más ayudo. Levanto la estructura documental completa —jerarquía, codificación, control de versiones, retención y trazabilidad— sobre la herramienta que ya usa: <strong>SharePoint, Google Drive, Dropbox</strong> o la que sea. Es lo que el auditor abre primero y lo que decide si la evidencia se encuentra en treinta segundos o no aparece.',
+      icon: 'fa-solid fa-folder-tree',
+    },
     {
       titulo: 'Diagnóstico de brechas',
       texto:
