@@ -13,8 +13,8 @@
 export const metodo = {
   id: 'metodo',
   eyebrow: 'Cómo trabajo',
-  titulo: 'Cuatro pasos y ninguna sorpresa',
-  subtitulo: 'El mismo camino para todos los encargos, con el precio cerrado antes de empezar.',
+  titulo: 'Cuatro fases, sin sorpresas de alcance',
+  subtitulo: 'El mismo protocolo para todos los encargos, con el alcance y el precio cerrados antes de la primera línea de trabajo.',
 
   cuerpo: `
     <p><strong>1. Conversación inicial, sin costo.</strong> Media hora para

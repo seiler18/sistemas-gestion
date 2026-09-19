@@ -17,10 +17,10 @@
 
 export const normas = {
   id: 'normas',
-  eyebrow: 'En qué me muevo',
+  eyebrow: 'Cobertura',
   titulo: 'Las seis normas',
   subtitulo:
-    'Todas comparten el mismo esqueleto —el Anexo SL—, y ahí está el ahorro: lo que se levanta para una sirve para las siguientes.',
+    'Seis normas, un solo núcleo. El Anexo SL es la estructura común: lo que se construye para una queda disponible para las demás.',
   filtro: false,
   densidad: 'compacta',
 

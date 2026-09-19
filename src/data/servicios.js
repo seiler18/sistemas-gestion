@@ -16,10 +16,10 @@
 
 export const servicios = {
   id: 'servicios',
-  eyebrow: 'Qué hago',
+  eyebrow: 'Qué construyo',
   titulo: 'Servicios',
   subtitulo:
-    'Trabajo acotado y a precio cerrado. Nada de bolsas de horas ni reuniones que se facturan solas.',
+    'Alcance cerrado, entregables definidos y precio fijo. Como un proyecto de software: se especifica antes de empezar y no se factura por reunión.',
   filtro: false,
   densidad: 'amplia',
 
@@ -27,7 +27,7 @@ export const servicios = {
     {
       titulo: 'Diagnóstico de brechas',
       texto:
-        'Dónde está hoy su organización respecto de lo que le van a pedir. Revisión documental y de prácticas, informe con los hallazgos priorizados y un plan de acción con responsables y plazos. Es el punto de partida honesto: a veces el resultado es que falta menos de lo que se temía.',
+        'El estado real del sistema frente a lo que se le va a exigir. Revisión de documentación y de prácticas, informe con los hallazgos priorizados por criticidad y un plan de acción con responsables y plazos. Es el punto de partida honesto: a veces el resultado es que falta menos de lo que se temía.',
       icon: 'fa-solid fa-magnifying-glass-chart',
     },
     {
@@ -39,13 +39,13 @@ export const servicios = {
     {
       titulo: 'Integración multinorma',
       texto:
-        'Ya tiene una norma y le piden la segunda. Bajo el Anexo SL las seis comparten estructura: contexto, liderazgo, riesgos, competencia, auditoría interna y revisión por la dirección se levantan <strong>una vez</strong>, no tres. Aquí es donde se ahorra de verdad.',
+        'Ya tiene una norma y le piden la segunda. Las seis corren sobre el mismo núcleo —el Anexo SL—: contexto, liderazgo, riesgos, competencia, auditoría interna y revisión por la dirección se construyen <strong>una vez</strong> y quedan disponibles para las siguientes. Aquí es donde se ahorra de verdad.',
       icon: 'fa-solid fa-layer-group',
     },
     {
       titulo: 'Automatización del sistema',
       texto:
-        'Evidencias que se recogen solas, indicadores que se calculan solos y tableros que el comité mira sin que nadie arme un Excel la noche anterior. RPA, Power BI e IA aplicados al sistema de gestión. Es el cruce menos poblado: mucha gente sabe de normas, poca sabe automatizarlas.',
+        'Evidencia que se recoge sola, indicadores que se calculan solos y tableros que el comité abre sin que nadie arme un Excel la noche anterior. RPA, Power BI e IA aplicados al sistema de gestión. Es el cruce menos poblado del rubro: mucha gente entiende de normas, muy poca sabe automatizarlas.',
       icon: 'fa-solid fa-robot',
     },
   ],

@@ -13,14 +13,24 @@
 export const site = {
   nombre: 'Jesús Seiler',
   nombreCorto: 'J. Seiler',
-  lema: 'Sistemas de gestión ISO, explicados por quien los opera',
+  lema: 'Un sistema de gestión también es un sistema',
   descripcion:
     'Diagnóstico de brechas, preparación para la certificación e integración multinorma ISO en Chile. Auditor interno en 9001, 14001, 45001, 27001, 22301 y 20000-1.',
   url: 'https://seiler18.github.io/sistemas-gestion/',
 
   armazon: 'topbar',
 
-  logo: null,
+  /* La misma foto que lleva la topbar del CV (`YO.webp`, WebP de 200px).
+     Va una PERSONA y no un logotipo a propósito: lo que se vende aquí es el
+     criterio de alguien que opera sistemas de gestión, no una consultora.
+     Se recorta en círculo desde layout.css.
+
+     El favicon sí es el logotipo («Jesu Program»), igual que en las páginas
+     estáticas del CV: una cara a 16px no se distingue, una marca sí.
+
+     El monograma se conserva como respaldo: si el archivo falta, shell.js
+     cae en él en vez de dejar un hueco. */
+  logo: 'assets/img/avatar.webp',
   monograma: 'JS',
 
   idioma: 'es',

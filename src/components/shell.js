@@ -18,7 +18,7 @@ import { mapaMenu } from '../site-map.js'
 
 function marca(clase) {
   const visual = site.logo
-    ? `<img class="${clase}-logo" src="${site.logo}" alt="${site.nombre}" width="40" height="40">`
+    ? `<img class="${clase}-logo" src="${site.logo}" alt="Foto de ${site.nombre}" width="40" height="40">`
     : `<span class="${clase}-monograma" aria-hidden="true">${site.monograma}</span>`
 
   return `

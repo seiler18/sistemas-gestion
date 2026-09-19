@@ -11,9 +11,9 @@
    ============================================================ */
 
 export const hero = {
-  antetitulo: 'Auditor interno · ISO 9001 · 14001 · 45001 · 27001 · 22301 · 20000-1',
+  antetitulo: 'ISO 9001 · 14001 · 45001 · 27001 · 22301 · 20000-1',
   bajada:
-    'Acompaño a empresas que tienen que certificarse —o que ya lo están y quieren una norma más— sin duplicar la papelería ni pagar una consultora por horas.',
+    'Entradas, controles, evidencia y trazabilidad: bajo la burocracia, una norma describe una arquitectura. La diseño, la integro y la automatizo para empresas que tienen que certificarse —o que ya lo están y quieren una norma más.',
 
   acciones: [
     { label: 'Ver servicios', href: '#servicios', icon: 'fa-solid fa-arrow-down' },
@@ -22,7 +22,7 @@ export const hero = {
 
   cinta: [
     { dato: '6', pie: 'normas ISO como auditor interno' },
-    { dato: '1', pie: 'sistema integrado gestionado a diario' },
+    { dato: 'Anexo SL', pie: 'el núcleo común de las seis' },
   ],
 
   siguiente: 'servicios',

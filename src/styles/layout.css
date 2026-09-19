@@ -112,8 +112,14 @@ body[data-armazon="sidebar"] .topbar {
   font-size: var(--txt-ui);
   box-shadow: 0 0 18px var(--brillo-acento);
 }
+/* Es una FOTO, no un logotipo: círculo, recorte centrado y algo desplazado
+   hacia arriba, que es donde está la cara en un retrato. Sin `object-fit` la
+   imagen se deforma al encajarla en un cuadrado. */
 .marca-logo {
   border: 2px solid var(--borde-vivo);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
   box-shadow: 0 0 14px var(--brillo-acento);
 }
 

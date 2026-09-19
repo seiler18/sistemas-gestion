@@ -17,7 +17,7 @@
    ============================================================ */
 
 export const contacto = {
-  eyebrow: 'Hablemos',
+  eyebrow: 'Primer contacto',
   titulo: 'Contacto',
   subtitulo:
     'La primera conversación no se cobra. Cuénteme qué le están pidiendo y le digo con franqueza si puedo ayudar.',

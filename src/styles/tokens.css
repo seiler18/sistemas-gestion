@@ -16,26 +16,40 @@
 
 :root {
   /* ----- Color: fondos ----- */
-  --bg:            #0f1419;   /* fondo general */
-  --bg-2:          #131a21;   /* fondo alterno, para alternar secciones */
-  --surface:       #1a232c;   /* tarjetas y paneles */
-  --surface-2:     #151d25;   /* paneles hundidos, campos de formulario */
+  /* PALETA «NÚCLEO» — no está en referencia/paletas.md de WebMaker: se diseñó
+     para este sitio. El primario es un índigo eléctrico emparentado con el
+     azul del logotipo (#2976C0) y el acento es el aguamarina que en el
+     vocabulario de auditoría significa «conforme». Los fondos son más
+     profundos que los de cualquier paleta del catálogo: es lo que da el aire
+     de panel de control en vez de folleto corporativo.
+
+     CONTRASTES VERIFICADOS (WCAG AA, texto normal 4.5:1):
+       texto sobre fondo ........ 16.89:1
+       texto tenue sobre tarjeta . 7.38:1
+       acento sobre fondo ....... 12.51:1
+       BLANCO SOBRE --primario ... 4.84:1  ← el que manda en los botones
+     El primario NO puede aclararse: a #4f6bff el blanco encima cae a 4.30:1
+     y los botones dejan de cumplir. Si lo tocas, recalcula. */
+  --bg:            #05070f;   /* fondo general */
+  --bg-2:          #090c17;   /* fondo alterno, para alternar secciones */
+  --surface:       #0e1220;   /* tarjetas y paneles */
+  --surface-2:     #0b0f1c;   /* paneles hundidos, campos de formulario */
 
   /* ----- Color: marca ----- */
-  --primario:      #3b6ea5;
-  --primario-claro:#7ba7d4;
-  --acento:        #9ab8d4;
+  --primario:      #4763f2;
+  --primario-claro:#8fa2ff;
+  --acento:        #2ee6b0;
 
   /* ----- Color: texto ----- */
-  --texto:         #e8eaed;
-  --texto-tenue:   #9aa5b1;
+  --texto:         #e8ebf5;
+  --texto-tenue:   #98a3bd;
   --texto-fuerte:  #ffffff;
 
   /* ----- Color: bordes y brillos ----- */
-  --borde:         rgba(255, 255, 255, 0.07);
-  --borde-vivo:    rgba(154, 184, 212, 0.40);
-  --brillo:        rgba(59, 110, 165, 0.20);
-  --brillo-acento: rgba(154, 184, 212, 0.25);
+  --borde:         rgba(255, 255, 255, 0.08);
+  --borde-vivo:    rgba(46, 230, 176, 0.42);
+  --brillo:        rgba(71, 99, 242, 0.28);
+  --brillo-acento: rgba(46, 230, 176, 0.38);
 
   /* ----- Color: DERIVADOS -----
      NO SE TOCAN AL CAMBIAR DE PALETA. Salen con `color-mix()` de los colores
@@ -124,8 +138,8 @@
      collage. Si solo usas una, deja las dos variables con el mismo valor.
      El respaldo del sistema no es decorativo: si Google Fonts no carga, el
      texto tiene que seguir leyéndose. */
-  --fuente-titulos: 'Montserrat', system-ui, sans-serif;
-  --fuente-texto:   'Open Sans', system-ui, sans-serif;
+  --fuente-titulos: 'Space Grotesk', system-ui, sans-serif;
+  --fuente-texto:   'Inter', system-ui, sans-serif;
 
   /* ----- Escala -----
      DIEZ tamaños para todo el sitio, cada uno con UN papel. La versión

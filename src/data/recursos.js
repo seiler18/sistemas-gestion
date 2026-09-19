@@ -17,9 +17,9 @@
 
 export const recursos = {
   id: 'recursos',
-  eyebrow: 'Gratis y sin correo de por medio',
+  eyebrow: 'Abierto',
   titulo: 'Recursos abiertos',
-  subtitulo: 'Material de autoría propia, publicado para que lo use quien quiera.',
+  subtitulo: 'Material de autoría propia, publicado en abierto para que lo use quien quiera. Sin registro y sin versión premium escondida.',
 
   cuerpo: `
     <p>Estoy armando un repositorio público con lo que a mí me habría servido
