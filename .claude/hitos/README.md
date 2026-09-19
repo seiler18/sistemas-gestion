@@ -18,3 +18,4 @@ No se duplica información entre ellos. Para añadir un hito, ver la skill
 
 | # | Fecha | Título | Estado |
 |---|---|---|---|
+| [0001](0001-nace-el-sitio-de-sistemas-de-gestion.md) | 2026-09-19 | Nace el sitio de sistemas de gestión ISO | completado |
