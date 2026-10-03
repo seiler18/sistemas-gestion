@@ -100,6 +100,11 @@
   --ok:            #34d399;
   --error:         #f87171;
 
+  /* ----- Color: efectos de interacción (efectos.css) ----- */
+  --brillo-cursor: color-mix(in srgb, var(--acento) 14%, transparent); /* resplandor que sigue al cursor */
+  --brillo-texto:  rgba(255, 255, 255, 0.75);                         /* destello que recorre el nombre */
+  --blanco-titulo: #ffffff;                                           /* arranque del degradado del nombre */
+
   /* ----- Degradados -----
      TRES, y la diferencia importa:
 
@@ -257,6 +262,12 @@
   --ciclo-luces:   15s;
   --ciclo-rejilla: 22s;
   --ciclo-latido:  2.4s;
+  --ciclo-brillo:  9s;      /* una vuelta del destello del nombre (efectos.css): lento, tono sobrio */
+  --espera-brillo: 1.6s;   /* cuánto espera el primer destello: que antes entre el título */
+  --retardo-chips: 260ms;  /* espera antes de la primera norma del antetítulo */
+  --paso-chips:    110ms;  /* escalón entre una norma y la siguiente */
+  --paso-proceso:  260ms;  /* escalón entre fases de la línea de proceso */
+  --dibujo-proceso:1100ms; /* lo que tarda en dibujarse la línea: 4 fases × --paso-proceso */
 
   /* ----- Formas ----- */
   --radio:         16px;

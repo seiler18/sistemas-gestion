@@ -1,5 +1,6 @@
 import { site } from '../../data/site.js'
 import { hero } from '../../data/hero.js'
+import { montarDotField } from '../../lib/fondo-dotField.js'
 
 /* ============================================================
    HERO / PORTADA
@@ -41,9 +42,20 @@ export function renderHero() {
     `
     : ''
 
+  // Cada norma del antetítulo (separadas por « · » en src/data/hero.js) pasa a
+  // ser una etiqueta que entra escalonada: ver efectos.css. El texto leído por
+  // un lector de pantalla es el mismo; los puntos medios son decorativos.
+  const antetitulo = hero.antetitulo
+    .split(' · ')
+    .map((norma, i) => `<span class="norma-chip" style="--i:${i}">${norma}</span>`)
+    .join(' <span class="norma-sep" aria-hidden="true">·</span> ')
+
   return `
     <header class="hero" id="inicio">
       <div class="hero-fondo" aria-hidden="true"></div>
+      <!-- Matriz de puntos animada. La monta initHero() (conducta, no render:
+           los componentes de aquí son funciones puras que no tocan el DOM). -->
+      <div class="hero-puntos" aria-hidden="true"></div>
 
       <!-- SECUENCIA DE ENTRADA DE LA PORTADA. El atributo data-anim-secuencia
            escalona a los hijos 70ms cada uno (src/lib/reveal.js), y el orden
@@ -58,7 +70,7 @@ export function renderHero() {
            ahí mismo: el archivo deja de compilar con un error que señala la
            línea siguiente y no dice nada del comentario. -->
       <div class="hero-contenido" data-anim-secuencia>
-        ${hero.antetitulo ? `<p class="hero-antetitulo" data-anim="subir">${hero.antetitulo}</p>` : ''}
+        ${antetitulo ? `<p class="hero-antetitulo" data-anim="subir">${antetitulo}</p>` : ''}
         <h1 class="hero-titulo" data-anim="subir">${site.nombre}</h1>
         ${site.lema ? `<p class="hero-lema" data-anim="subir">«${site.lema}»</p>` : ''}
         <p class="hero-bajada" data-anim="subir">${hero.bajada}</p>
@@ -74,4 +86,23 @@ export function renderHero() {
       </a>
     </header>
   `
+}
+
+/**
+ * Monta el fondo de puntos de la portada, tras inyectar el HTML en #app.
+ * Los colores salen de los tokens de tokens.css (--primario-claro y --acento).
+ * Aquí va más tenue que en otros sitios y SIN ondulación: un sitio de
+ * consultoría ISO vende rigor, y un fondo quieto que solo responde al cursor
+ * se lee como instrumento, no como adorno.
+ */
+export function initHero() {
+  const lienzo = document.querySelector('.hero-puntos')
+  if (!lienzo) return
+  const css = getComputedStyle(document.documentElement)
+  montarDotField(lienzo, {
+    colorA: css.getPropertyValue('--primario-claro').trim() || '#8fa2ff',
+    colorB: css.getPropertyValue('--acento').trim() || '#2ee6b0',
+    opacidad: 0.45,
+    ondulacion: 0,
+  })
 }

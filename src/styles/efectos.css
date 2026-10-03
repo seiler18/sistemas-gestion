@@ -1,0 +1,155 @@
+/* ============================================================
+   EFECTOS DE INTERACCIÓN — estilos de src/lib/efectos.js y src/lib/proceso.js
+
+   Se importa DESPUÉS de components.css (para ganarle por orden de cascada) y
+   ANTES de responsive.css, que sigue siendo el último. Colores y duraciones
+   salen de tokens.css; este archivo también lo revisa `npm run check`.
+
+   TONO: es un sitio de consultoría ISO y aquí se vende rigor. Por eso todo es
+   sutil y no hay efectos «de juego»: se omitieron las chispas al pulsar, y el
+   fondo de puntos no ondula (solo reacciona al cursor).
+   ============================================================ */
+
+/* ----------------------- BRILLO QUE SIGUE AL CURSOR -----------------------
+   El JS reparte `--mx` / `--my` (posición del cursor dentro de la ficha). Va en
+   `hover: hover`, como todo hover de este proyecto: en táctil no hay cursor y
+   el resplandor se quedaría clavado donde se tocó por última vez. */
+@media (hover: hover) and (pointer: fine) {
+  .tarjeta,
+  .destacado {
+    position: relative;
+  }
+  .tarjeta::before,
+  .destacado::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    pointer-events: none; /* si no, taparía los enlaces de la ficha */
+    opacity: 0;
+    background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), var(--brillo-cursor), transparent 70%);
+    transition: opacity var(--medio) var(--curva-suave);
+  }
+  .tarjeta:hover::before,
+  .destacado:hover::before {
+    opacity: 1;
+  }
+}
+
+/* ----------------------- BOTONES MAGNÉTICOS -----------------------
+   `translate` es una propiedad aparte de `transform`: no pisa el translateY
+   del :hover. Hay que añadirla a la lista de transiciones del botón, o el
+   desplazamiento sería a saltos. */
+.hero-btn {
+  translate: var(--mag-x, 0) var(--mag-y, 0);
+  transition:
+    transform var(--rapido) var(--curva-salida),
+    box-shadow var(--medio) var(--curva-salida),
+    background-color var(--medio) var(--curva-suave),
+    color var(--medio) var(--curva-suave),
+    translate var(--rapido) var(--curva-salida);
+}
+
+/* ----------------------- BRILLO QUE RECORRE EL NOMBRE -----------------------
+   EXCEPCIÓN A «se anima transform y opacity», y es deliberada: un destello
+   sobre texto con degradado solo se puede hacer moviendo el fondo recortado al
+   texto. Repinta UN elemento, no recalcula la maqueta, y el barrido dura ~2,4 s
+   de cada 9 (el resto queda quieto: aquí se pidió sobriedad).
+   Propiedades sueltas (`background-image`, no `background`): el atajo
+   reiniciaría el `background-clip: text` que ya pone .hero-titulo y el nombre
+   se vería como un rectángulo de color. La capa de arriba es el destello; la
+   de abajo, el degradado de siempre.
+
+   NO se parte el nombre en palabras animadas: lleva degradado recortado al
+   texto y las palabras con transform lo dejan INVISIBLE (probado en el hub). */
+.hero-titulo {
+  background-image:
+    linear-gradient(105deg, transparent 42%, var(--brillo-texto) 50%, transparent 58%),
+    linear-gradient(160deg, var(--blanco-titulo) 0%, var(--primario-claro) 55%, var(--acento) 100%);
+  background-size: 250% 100%, 100% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-position: 120% 0, 0 0;
+  animation: brillo-nombre var(--ciclo-brillo) linear var(--espera-brillo) infinite;
+}
+@keyframes brillo-nombre {
+  0%   { background-position: 120% 0, 0 0; }
+  27%  { background-position: -20% 0, 0 0; }
+  100% { background-position: -20% 0, 0 0; }
+}
+
+/* ----------------------- NORMAS COMO CHIPS (propio de este sitio) -----------------------
+   El antetítulo de la portada lista las seis normas. hero.js lo parte en una
+   etiqueta por norma y aquí entran escalonadas, una tras otra: se lee como un
+   inventario que se va enumerando —«estas son las seis»— y refuerza lo que el
+   sitio promete, que es cobertura. Solo opacity + transform.
+   `both` mantiene la primera posición durante el retardo; sin él cada norma se
+   vería entera hasta que le toque y luego saltaría a empezar. */
+.norma-chip {
+  display: inline-block;
+  animation: chip-entra var(--lento) var(--curva-salida) both;
+  animation-delay: calc(var(--retardo-chips) + var(--i, 0) * var(--paso-chips));
+}
+.norma-sep {
+  opacity: 0.55; /* el punto medio separa, no compite con las normas */
+}
+@keyframes chip-entra {
+  from { opacity: 0; transform: translateY(0.5em); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ----------------------- LÍNEA DE PROCESO (propio de este sitio) -----------------------
+   «Cómo trabajo»: cuatro fases. La línea se dibuja de arriba abajo con
+   `scaleY` (transform, no height) y cada fase enciende su nodo con el escalón
+   `--paso-proceso`; el dibujo tarda lo mismo que las cuatro fases juntas, así
+   la línea «llega» a cada nodo justo cuando este se enciende. Lo activa
+   src/lib/proceso.js añadiendo `.proceso-activo`; sin JS no hay `.proceso` y
+   el texto queda como estaba.
+   Con movimiento reducido las transiciones duran 0,01 ms (regla global de
+   base.css) y todo aparece ya dibujado. */
+.bloque-texto.proceso {
+  position: relative;
+  padding-left: 2.5rem;
+  text-align: left; /* una línea vertical a la izquierda pide texto alineado a ella */
+}
+.proceso::before {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  top: 0.6em;
+  bottom: 0.6em;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--acento), var(--primario));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dibujo-proceso) var(--curva-suave);
+}
+.proceso-activo::before {
+  transform: scaleY(1);
+}
+.proceso > p {
+  position: relative;
+}
+.proceso > p::before {
+  content: "";
+  position: absolute;
+  left: -2.5rem;
+  top: 0.45em;
+  width: 1.1rem;
+  height: 1.1rem;
+  box-sizing: border-box;
+  border: 2px solid var(--acento);
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: 0 0 10px var(--brillo-acento);
+  opacity: 0;
+  transform: scale(0.4);
+  transition:
+    opacity var(--medio) var(--curva-salida),
+    transform var(--medio) var(--curva-salida);
+  transition-delay: calc(var(--i, 0) * var(--paso-proceso));
+}
+.proceso-activo > p::before {
+  opacity: 1;
+  transform: none;
+}

@@ -32,6 +32,12 @@ algo con sustancia, registra el hito (skill `registrar-hito`).
 - **Build:** Vite 8 (`vite.config.js` → `base: '/sistemas-gestion/'`)
 - **Frontend:** HTML/CSS/JS vanilla. Sin framework, sin jQuery. Los
   componentes son funciones que devuelven strings de HTML.
+- **Efectos:** fondo de puntos en canvas 2D (`src/lib/fondo-dotField.js`) y
+  efectos de interacción (`src/lib/efectos.js`, `proceso.js`,
+  `src/styles/efectos.css`). Los dos primeros, adaptados de React Bits (MIT +
+  Commons Clause: se usan aquí, **no se redistribuyen**). Tono sobrio: sin
+  chispas ni título por palabras (el nombre lleva degradado recortado al
+  texto). Todo se apaga con `prefers-reduced-motion`.
 - **Iconos:** Font Awesome 6 por CDN (prefijos `fa-solid` / `fa-brands`)
 - **Tipografía:** Google Fonts
 - **Deploy:** GitHub Actions → rama `gh-pages` → GitHub Pages

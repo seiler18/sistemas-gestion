@@ -18,4 +18,5 @@ No se duplica información entre ellos. Para añadir un hito, ver la skill
 
 | # | Fecha | Título | Estado |
 |---|---|---|---|
+| [0002](0002-efectos-de-interaccion-tematicos.md) | 2026-10-03 | Efectos de interacción adaptados al tema ISO | completado |
 | [0001](0001-nace-el-sitio-de-sistemas-de-gestion.md) | 2026-09-19 | Nace el sitio de sistemas de gestión ISO | completado |
