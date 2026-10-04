@@ -2,7 +2,7 @@
 
 - **Fecha:** 2026-10-04
 - **Estado:** completado
-- **Commits:** pendiente de commit
+- **Commits:** `fc0bd50`
 
 ## Contexto
 El sitio salió con la paleta «Núcleo»: índigo eléctrico (`#4763f2`), lavanda
