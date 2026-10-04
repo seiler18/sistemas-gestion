@@ -16,6 +16,7 @@ import './styles/base.css'
 import './styles/layout.css'
 import './styles/components.css'
 import './styles/efectos.css'
+import './styles/diapositivas.css'
 import './styles/responsive.css'
 
 /* --- 2. Markup --------------------------------------------------------- */
@@ -32,6 +33,8 @@ import { initProceso } from './lib/proceso.js'
 import { initScrollSpy } from './lib/scrollspy.js'
 import { initReveal } from './lib/reveal.js'
 import { initModales } from './lib/modal.js'
+import { initTema } from './lib/tema.js'
+import { initDiapositivas } from './lib/diapositivas.js'
 
 const app = document.getElementById('app')
 
@@ -56,10 +59,15 @@ app.innerHTML = `
 
 // El offset debe ser >= al alto de la barra fija (--topbar-h) para que una
 // sección no se marque activa antes de asomar por debajo de ella.
-const refrescarSpy = initScrollSpy({ offset: 96 })
+const refrescarSpy = initScrollSpy({
+  offset: 96,
+  pausado: () => document.body.hasAttribute('data-diapositivas'),
+})
 
+initTema()       // interruptor claro / oscuro (el tema guardado ya lo puso public/tema-inicial.js)
 initReveal()     // animaciones de entrada
-initHero()       // fondo de puntos de la portada
+initHero()       // ondas de la portada
+initDiapositivas() // escritorio: secciones como diapositivas horizontales
 
 // Efectos de interacción (ver src/lib/efectos.js y proceso.js). Todos se apagan
 // con prefers-reduced-motion y los de puntero solo corren donde hay hover real.
