@@ -4,16 +4,14 @@
    Todo lo que se repite en más de un sitio (cabecera, pie, meta tags del
    index.html) vive aquí para no tenerlo escrito en cuatro archivos.
 
-   OJO CON EL NOMBRE: es el <h1> de la portada. Va solo «Jesús Seiler» y no
-   «Jesús Seiler · Sistemas de Gestión» a propósito — un H1 de cinco palabras
-   se parte en dos líneas en móvil y pierde la fuerza. Lo que hace se dice en
-   el antetítulo y en el lema, que es donde el ojo va después.
+   OJO: el <h1> de la portada es el lema, no el nombre. El nombre ya está en la
+   barra superior y repetirlo en el centro sobraba.
    ============================================================ */
 
 export const site = {
   nombre: 'Jesús Seiler',
   nombreCorto: 'J. Seiler',
-  lema: 'Un sistema de gestión también es un sistema',
+  lema: 'Tu sistema de gestión, ordenado y listo para auditar',
   descripcion:
     'Diagnóstico de brechas, preparación para la certificación e integración multinorma ISO en Chile. Auditor interno en 9001, 14001, 45001, 27001, 22301 y 20000-1.',
   url: 'https://seiler18.github.io/sistemas-gestion/',
