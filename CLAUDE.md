@@ -10,6 +10,19 @@ Generado con **WebMaker** (`../WebMaker/`). Este archivo describe **el estado
 actual y cómo se trabaja aquí**. No lleva historial: eso vive en
 `.claude/hitos/`.
 
+## Parte de la línea ISO
+
+Este sitio es la **vitrina** de una línea de negocio de tres repos:
+
+| Repo | Qué aporta aquí |
+|---|---|
+| `../organizador-iso` (privado) | qué se vende y a cuánto (`productos/catalogo.md`), el tono B2B y `contexto/limites_legales.md` |
+| `../iso-toolkit` (privado por ahora) | el material abierto al que el sitio puede enlazar cuando sea público |
+
+Antes de publicar un texto sobre servicios, pasa por los límites legales de
+`organizador-iso`: nada de «certificamos», ni logos de ISO, ni nada de
+OPCIONES. Si cambia un producto o un precio, cambia allá y aquí.
+
 ## Dónde está cada cosa
 
 | Necesitas… | Ve a |
