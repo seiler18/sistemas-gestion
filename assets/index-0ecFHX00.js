@@ -200,20 +200,26 @@
     el sistema sin mí. Un sistema que depende del consultor se cae en cuanto
     el consultor se va, y eso lo paga usted en la siguiente auditoría.</p>
   `,imagen:null,destacados:[{icon:`fa-solid fa-clock`,titulo:`Disponibilidad real`,texto:`Entre 8 y 10 horas por semana. Eso descarta implementaciones grandes con equipo en terreno, y favorece encargos acotados y bien definidos. Prefiero decirlo antes.`},{icon:`fa-solid fa-scale-balanced`,titulo:`Lo que no hago`,texto:`No audito lo que yo mismo implementé: quien asesora no puede auditar, es el principio de imparcialidad de ISO/IEC 17021-1. Tampoco emito certificados ni sellos de ningún tipo.`},{icon:`fa-solid fa-industry`,titulo:`Dónde soy fuerte y dónde no`,texto:`Mi experiencia vivida es en servicios y sistemas de información. En manufactura, alimentos o construcción el criterio es prestado, y se lo advertiré antes de aceptar el encargo.`}]},S={id:`normas`,eyebrow:`Cobertura`,titulo:`Las seis normas`,subtitulo:`Seis normas, un solo núcleo. El Anexo SL es la estructura común: lo que se construye para una queda disponible para las demás.`,filtro:!1,densidad:`compacta`,items:[{titulo:`ISO 9001:2015 · Calidad`,texto:`Demostrar que sabe quiénes son sus clientes y qué esperan, que sus procesos están definidos y bajo control, y que cuando algo sale mal se corrige y se aprende en vez de repetirse.`,icon:`fa-solid fa-circle-check`},{titulo:`ISO 14001:2015 · Ambiental`,texto:`Demostrar que identificó cómo su operación toca el medio ambiente, que conoce y cumple la normativa que le aplica, y que actúa sobre lo que sí está en su mano cambiar.`,icon:`fa-solid fa-leaf`},{titulo:`ISO 45001:2018 · Seguridad y salud`,texto:`Demostrar que identificó a qué peligros expone a su gente, que los controla con medidas reales, y que los trabajadores participan de verdad en esas decisiones y no solo firman una lista.`,icon:`fa-solid fa-helmet-safety`},{titulo:`ISO/IEC 27001:2022 · Seguridad de la información`,texto:`Demostrar qué información le importa, qué riesgos corre, qué controles decidió aplicar y —esto es lo que más cuesta— por qué descartó los que no aplicó.`,icon:`fa-solid fa-lock`},{titulo:`ISO 22301:2019 · Continuidad del negocio`,texto:`Demostrar cuánto tiempo puede estar caída cada actividad antes de que el daño sea serio, y que tiene un plan probado para volver a operar. Probado: no escrito y guardado.`,icon:`fa-solid fa-tower-broadcast`},{titulo:`ISO/IEC 20000-1:2018 · Servicios de TI`,texto:`Demostrar que los servicios de TI que presta se gestionan y no solo se prestan: qué ofrece, con qué compromisos, y cómo maneja incidentes, cambios y capacidad.`,icon:`fa-solid fa-server`}]},C={id:`recursos`,eyebrow:`Abierto`,titulo:`Recursos abiertos`,subtitulo:`Material de autoría propia, publicado en abierto para que lo use quien quiera. Sin registro y sin versión premium escondida.`,cuerpo:`
-    <p>Estoy armando un repositorio público con lo que a mí me habría servido
-    tener cuando empecé: el <strong>mapa de correspondencia del Anexo SL</strong>
-    entre las seis normas —qué requisito de una cubre cuál de las otras—,
-    checklists de auditoría interna, y plantillas base para los documentos que
-    todo sistema termina necesitando.</p>
+    <p>Está publicado en un repositorio público: el <strong>catálogo de las
+    seis normas</strong> en datos estructurados, ocho métodos paso a paso
+    —del diagnóstico de brechas a la revisión por la dirección— y un generador
+    que arma la estructura de un sistema integrado, la lista maestra de
+    documentos y los checklists por norma.</p>
 
-    <p>Sin registro, sin dejar el correo y sin versión «premium» escondida
-    detrás. La razón es simple: en este rubro nadie contrata a quien no ha
-    visto trabajar, y un repositorio abierto demuestra más que cualquier
-    página de servicios.</p>
+    <p>En construcción: el <strong>mapa de correspondencia del Anexo
+    SL</strong> al detalle de subapartado —qué requisito de una norma cubre
+    cuál de las otras— y las plantillas base.</p>
 
-    <p><strong>Todavía no está publicado.</strong> Prefiero decirlo así antes
-    que dejar un enlace a un repositorio a medio llenar. Si quiere que le
-    avise cuando esté, escríbame y se lo digo.</p>
+    <p>En este rubro nadie contrata a quien no ha visto trabajar, y un
+    repositorio abierto lo demuestra mejor que una página de servicios.</p>
+
+    <p class="tarjeta-accion">
+      <a class="btn-linea" href="https://github.com/seiler18/iso-toolkit"
+         target="_blank" rel="noopener noreferrer">
+        Ver el repositorio en GitHub
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </p>
   `,imagen:null,destacados:[{icon:`fa-solid fa-triangle-exclamation`,titulo:`Lo que no va a encontrar ahí`,texto:`El texto de las normas. Son obra protegida y las vende el INN: ni copias, ni extractos, ni resúmenes que las reemplacen. Las plantillas son propias y se usan junto a la norma, no en su lugar.`}]},w={id:`quien`,eyebrow:`Quién está detrás`,titulo:`Jesús Seiler`,subtitulo:`Auditor interno en ISO 9001, 14001, 45001, 27001, 22301 y 20000-1.`,cuerpo:`
     <p>No estudié las normas para venderlas: las opero. Gestiono a diario un
     sistema integrado de gestión multinorma, y he preparado y vivido
