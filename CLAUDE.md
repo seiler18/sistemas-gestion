@@ -17,7 +17,7 @@ Este sitio es la **vitrina** de una línea de negocio de tres repos:
 | Repo | Qué aporta aquí |
 |---|---|
 | `../organizador-iso` (privado) | qué se vende y a cuánto (`productos/catalogo.md`), el tono B2B y `contexto/limites_legales.md` |
-| `../iso-toolkit` (privado por ahora) | el material abierto al que el sitio puede enlazar cuando sea público |
+| `../iso-toolkit` (público) | el material abierto: <https://github.com/seiler18/iso-toolkit>; el sitio puede enlazarlo |
 
 Antes de publicar un texto sobre servicios, pasa por los límites legales de
 `organizador-iso`: nada de «certificamos», ni logos de ISO, ni nada de
