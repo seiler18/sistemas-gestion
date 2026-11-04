@@ -1,14 +1,14 @@
 /* ============================================================
    RECURSOS ABIERTOS
 
-   AQUÍ NO HAY ENLACE, Y ES DELIBERADO. El repositorio `iso-toolkit` todavía
-   no está publicado (el mapa del Anexo SL está a medio escribir). Enlazar a
-   un repo vacío hace el daño contrario al que busca esta sección: quien lo
-   abra concluye que detrás no hay nada.
+   Enlaza al repositorio `iso-toolkit`, público desde el 2026-11-04. Hasta
+   entonces la sección no enlazaba nada a propósito: un repo vacío demuestra
+   lo contrario de lo que busca esta sección.
 
-   CUANDO SE PUBLIQUE, esta sección pasa a tarjetas con enlace y se anota el
-   hito. Mientras tanto describe lo que habrá, que es honesto y sigue
-   cumpliendo su función: demostrar competencia antes de pedir un peso.
+   EL TEXTO DICE QUÉ ESTÁ LISTO Y QUÉ NO. Si se nombra algo que el repo
+   todavía no tiene (plantillas, mapa al detalle), va como «en construcción»:
+   quien abra el enlace tiene que encontrar lo que se le prometió. Al publicar
+   una pieza nueva en el toolkit, se mueve aquí de una frase a la otra.
 
    NUNCA se sube aquí el PDF de una norma, ni un extracto, ni una traducción.
    Las plantillas son de autoría propia y no reemplazan a la norma, que el
@@ -22,20 +22,26 @@ export const recursos = {
   subtitulo: 'Material de autoría propia, publicado en abierto para que lo use quien quiera. Sin registro y sin versión premium escondida.',
 
   cuerpo: `
-    <p>Estoy armando un repositorio público con lo que a mí me habría servido
-    tener cuando empecé: el <strong>mapa de correspondencia del Anexo SL</strong>
-    entre las seis normas —qué requisito de una cubre cuál de las otras—,
-    checklists de auditoría interna, y plantillas base para los documentos que
-    todo sistema termina necesitando.</p>
+    <p>Está publicado en un repositorio público: el <strong>catálogo de las
+    seis normas</strong> en datos estructurados, ocho métodos paso a paso
+    —del diagnóstico de brechas a la revisión por la dirección— y un generador
+    que arma la estructura de un sistema integrado, la lista maestra de
+    documentos y los checklists por norma.</p>
 
-    <p>Sin registro, sin dejar el correo y sin versión «premium» escondida
-    detrás. La razón es simple: en este rubro nadie contrata a quien no ha
-    visto trabajar, y un repositorio abierto demuestra más que cualquier
-    página de servicios.</p>
+    <p>En construcción: el <strong>mapa de correspondencia del Anexo
+    SL</strong> al detalle de subapartado —qué requisito de una norma cubre
+    cuál de las otras— y las plantillas base.</p>
 
-    <p><strong>Todavía no está publicado.</strong> Prefiero decirlo así antes
-    que dejar un enlace a un repositorio a medio llenar. Si quiere que le
-    avise cuando esté, escríbame y se lo digo.</p>
+    <p>En este rubro nadie contrata a quien no ha visto trabajar, y un
+    repositorio abierto lo demuestra mejor que una página de servicios.</p>
+
+    <p class="tarjeta-accion">
+      <a class="btn-linea" href="https://github.com/seiler18/iso-toolkit"
+         target="_blank" rel="noopener noreferrer">
+        Ver el repositorio en GitHub
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </p>
   `,
 
   imagen: null,
